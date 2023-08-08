@@ -94,7 +94,7 @@
       layout-username="{{ CurrentUser.name }}"
       layout-systemflag="{{ SystemFlag }}"
       layout-useradmin="{{ CurrentUser.admin }}"
-      layout-search="{{ 1 }}"
+      layout-search="{{ CurrentUser.search }}"
       >
   </layout-searchbar>
   <div class="spinner-border" role="status" id="logo_animation"></div>
@@ -103,30 +103,22 @@
     {{ OOPS.loading() }}
     </div>
   </div>
-  <div id="main_bottom_menubar" class="position-fixed w-100 d-flex justify-content-between d-sm-none main-bottom-menubar d-none">
-    {% if "我的媒体库" in CurrentUser.pris %}
-    <a class="card-btn border-0 px-0 text-center" href="javascript:navmenu('index')">
+  <div class="position-fixed w-100 d-flex justify-content-between d-sm-none main-bottom-menubar">
+    <a class="card-btn border-0" href="javascript:navmenu('index')">
       {{ SVG.home() }}
     </a>
-    {% endif %}
-    {% if "探索" in CurrentUser.pris %}
-    <a class="card-btn border-0 px-0 text-center" href="javascript:navmenu('ranking')">
+    <a class="card-btn border-0" href="javascript:navmenu('ranking')">
       {{ SVG.chart_bar() }}
     </a>
-    {% endif %}
-    {% if "服务" in CurrentUser.pris %}
-    <a class="card-btn border-0 px-0 text-center" href="javascript:navmenu('service')">
+    <a class="card-btn border-0" href="javascript:navmenu('service')">
       {{ SVG.layout_2() }}
     </a>
-    {% endif %}
-    {% if "订阅管理" in CurrentUser.pris %}
-    <a class="card-btn border-0 px-0 text-center" href="javascript:navmenu('movie_rss')">
+    <a class="card-btn border-0" href="javascript:navmenu('movie_rss')">
       {{ SVG.movie() }}
     </a>
-    <a class="card-btn border-0 px-0 text-center" href="javascript:navmenu('tv_rss')">
+    <a class="card-btn border-0" href="javascript:navmenu('tv_rss')">
       {{ SVG.device_tv() }}
     </a>
-    {% endif %}
   </div>
 </div>
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd" aria-labelledby="消息中心">
@@ -968,7 +960,6 @@
           </div>
         </form>
         <textarea class="form-control mt-2" id="torrent_urls" rows="8" placeholder="https://xxxx，换行添加多个链接" aria-label=""></textarea>
-        <textarea class="form-control mt-2" id="torrent_magnets" rows="8" placeholder="magnet:?xt=xxxxxx，换行添加多个链接" aria-label=""></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-link link-secondary me-auto" data-bs-dismiss="modal">取消</button>

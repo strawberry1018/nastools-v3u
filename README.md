@@ -1,5 +1,5 @@
 ![logo-blue](https://user-images.githubusercontent.com/51039935/197520391-f35db354-6071-4c12-86ea-fc450f04bc85.png)
-# NAS媒体库管理工具-免认证解锁版
+# NAS媒体库管理工具
 
 [![GitHub stars](https://img.shields.io/github/stars/NAStool/nas-tools?style=plastic)](https://github.com/NAStool/nas-tools/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/NAStool/nas-tools?style=plastic)](https://github.com/NAStool/nas-tools/network/members)
@@ -9,9 +9,9 @@
 [![Platform](https://img.shields.io/badge/platform-amd64/arm64-pink?style=plastic)](https://hub.docker.com/r/jxxghp/nas-tools)
 
 
-Docker：https://hub.docker.com/repository/docker/challengerv/nas-tools
+Docker：https://hub.docker.com/repository/docker/jxxghp/nas-tools
 
-TG频道：https://t.me/nastool_official (官方)
+TG频道：https://t.me/nastool_official
 
 Wiki：https://t.me/NAStool_wiki
 
@@ -22,16 +22,11 @@ API: http://localhost:3000/api/v1/
 
 NAS媒体库管理工具。
 
-由于某些原因，官方NasTool3.x版本加入了PT站点认证，并移除了部分功能
-
-此版本在官方版本的基础上，免除了PT站点认证，并恢复了磁力下载/索引器等功能。
-
-
 
 ## 安装
 ### 1、Docker
 ```
-docker pull challengerv/nas-tools-unlock:latest
+docker pull jxxghp/nas-tools:latest
 ```
 教程见 [这里](docker/readme.md) 。
 
@@ -40,7 +35,7 @@ docker pull challengerv/nas-tools-unlock:latest
 ### 2、本地运行
 python3.10版本，需要预安装cython，如发现缺少依赖包需额外安装：
 ```
-git clone -b master https://github.com/YaoShuwei/nas-tools-unlock --recurse-submodule 
+git clone -b master https://github.com/NAStool/nas-tools --recurse-submodule 
 python3 -m pip install -r requirements.txt
 export NASTOOL_CONFIG="/xxx/config/config.yaml"
 nohup python3 run.py & 
@@ -49,7 +44,7 @@ nohup python3 run.py &
 ### 3、可执行文件
 下载打包好的执行文件运行即可，会自动生成配置文件目录：
 
-https://github.com/YaoShuwei/nas-tools-unlock/releases
+https://github.com/NAStool/nas-tools/releases
 
 ### 4、群晖套件
 添加矿神群晖SPK套件源直接安装：

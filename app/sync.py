@@ -438,7 +438,7 @@ class Sync(object):
         """
         检查配置的同步目录
         """
-        ret = self.dbhelper.check_config_sync_paths(
+        ret = self.dbhelper.delete_config_sync_path(
             sid=sid,
             compatibility=compatibility,
             rename=rename,
